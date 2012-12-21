@@ -1,0 +1,54 @@
+﻿body 
+{
+	background-color: #328bb3;
+}
+
+.default_main_table
+{
+	height: 500px; 
+	width: 800px; 
+	padding-top: 110px;
+}
+
+.default_welcome_div
+{
+	background-image: url(/images/FollowMe_BG.jpg); 
+	background-repeat: no-repeat;
+    height: 340px; 
+    width: 480px;
+    -moz-box-shadow: 0 0 5px 5px #fff;
+    -webkit-box-shadow: 0 0 5px 5px#fff;
+    box-shadow: 0 0 5px 5px #fff;
+}
+
+.default_login_div
+{
+	height: 150px; 
+	width: 250px; 
+	background-color: #8acfee;
+    -moz-box-shadow: 0 0 5px 5px #fff;
+    -webkit-box-shadow: 0 0 5px 5px#fff;
+    box-shadow: 0 0 5px 5px #fff;
+}
+
+.default_signup_div
+{
+	height: 190px; 
+	width: 250px; 
+	background-color: #8acfee;
+	-moz-box-shadow: 0 0 5px 5px #fff;
+    -webkit-box-shadow: 0 0 5px 5px#fff;
+    box-shadow: 0 0 5px 5px #fff;
+}
+
+.width_150
+{
+	width: 150px;
+}
+
+.line_height_0_5
+{
+	line-height:0.5;
+}
+
+
