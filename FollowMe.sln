@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FollowMe", "..\..\..\..\FollowMe\", "{25564EC8-FD96-4E23-BC60-4F8B33AD6138}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FollowMe", ".", "{0A4422BC-4D5F-496F-805C-EE47851F0890}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFramework = "3.5"
 		Debug.AspNetCompiler.VirtualPath = "/FollowMe"
@@ -26,8 +26,8 @@ Global
 		Debug|.NET = Debug|.NET
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{25564EC8-FD96-4E23-BC60-4F8B33AD6138}.Debug|.NET.ActiveCfg = Debug|.NET
-		{25564EC8-FD96-4E23-BC60-4F8B33AD6138}.Debug|.NET.Build.0 = Debug|.NET
+		{0A4422BC-4D5F-496F-805C-EE47851F0890}.Debug|.NET.ActiveCfg = Debug|.NET
+		{0A4422BC-4D5F-496F-805C-EE47851F0890}.Debug|.NET.Build.0 = Debug|.NET
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
