@@ -17,7 +17,7 @@
                         <br />
                         <p>
                             <b>&nbsp;&nbsp;Find out what&#8217;s happening, right now, with the people and &nbsp;&nbsp;organizations
-                                you care about..</b></p>
+                                you care about.</b></p>
                     </div>
                 </td>
                 <td>
