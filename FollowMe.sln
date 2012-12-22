@@ -24,10 +24,13 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
+		Release|.NET = Release|.NET
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0A4422BC-4D5F-496F-805C-EE47851F0890}.Debug|.NET.ActiveCfg = Debug|.NET
 		{0A4422BC-4D5F-496F-805C-EE47851F0890}.Debug|.NET.Build.0 = Debug|.NET
+		{0A4422BC-4D5F-496F-805C-EE47851F0890}.Release|.NET.ActiveCfg = Debug|.NET
+		{0A4422BC-4D5F-496F-805C-EE47851F0890}.Release|.NET.Build.0 = Debug|.NET
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
