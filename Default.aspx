@@ -63,7 +63,7 @@
                                 </td>
                                 <td align="right">
                                     <br class="line_height_0_5" />
-                                    <input type="text" maxlength="20" class="width_150" />
+                                    <input id="name" runat="server" type="text" maxlength="20" class="width_150" />
                                 </td>
                             </tr>
                             <tr>
@@ -73,7 +73,7 @@
                                 </td>
                                 <td align="right">
                                     <br class="line_height_0_5" />
-                                    <input type="text" class="width_150" />
+                                    <input id="email" runat="server" type="text" class="width_150" />
                                 </td>
                             </tr>
                             <tr>
@@ -83,13 +83,14 @@
                                 </td>
                                 <td align="right">
                                     <br class="line_height_0_5" />
-                                    <input type="password" class="width_150" />
+                                    <input type="password" class="width_150" id="password" runat="server" />
                                 </td>
                             </tr>
                             <tr>
                                 <td align="right" colspan="2">
                                     <br class="line_height_0_5" />
-                                    <asp:Button ID="btnSignUp" runat="server" Text="Sign up" />
+                                    <asp:Button ID="btnSignUp" runat="server" Text="Sign up" OnClientClick="return validate();"
+                                        OnClick="btnSignUp_Click" />
                                 </td>
                             </tr>
                         </table>
@@ -97,7 +98,35 @@
                 </td>
             </tr>
         </table>
+        <asp:Label ID="lbAlert" runat="server"></asp:Label>
     </center>
     </form>
+
+    <script type="text/javascript">
+
+        function validate() {
+            var name = document.getElementById("<%=name.ClientID %>");
+            var email = document.getElementById("<%=email.ClientID %>");
+            var password = document.getElementById("<%=password.ClientID %>");
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!name.value.match(/\S/)) {
+                alert("Please fill the name");
+                return false;
+            }
+            else if (!email.value.match(/\S/)) {
+                alert("Please fill the email");
+                return false;
+            }
+            else if (!filter.test(email.value)) {
+                alert("Please provide a valid email address");
+                return false;
+            }
+            else if (!password.value.match(/\S/)) {
+                alert("Please fill the password");
+                return false;
+            }
+        }
+    </script>
+
 </body>
 </html>

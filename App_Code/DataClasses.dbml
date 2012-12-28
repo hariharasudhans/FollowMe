@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="db461f27e0e0f14766adcaa12f00da8405" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=461f27e0-e0f1-4766-adca-a12f00da8405.sqlserver.sequelizer.com;Initial Catalog=db461f27e0e0f14766adcaa12f00da8405;User ID=pdupqqrutnndunei" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="db461f27e0e0f14766adcaa12f00da8405ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.user_registration" Member="user_registrations">
+    <Type Name="user_registration">
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="user_registration_user_followup" Member="user_followups" ThisKey="user_id" OtherKey="follower_user_id" Type="user_followup" />
+      <Association Name="user_registration_user_followup1" Member="user_followups1" ThisKey="user_id" OtherKey="following_user_id" Type="user_followup" />
+      <Association Name="user_registration_user_message" Member="user_messages" ThisKey="user_id" OtherKey="user_id" Type="user_message" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user_followup" Member="user_followups">
+    <Type Name="user_followup">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="follower_user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="following_user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="user_registration_user_followup" Member="user_registration" ThisKey="follower_user_id" OtherKey="user_id" Type="user_registration" IsForeignKey="true" />
+      <Association Name="user_registration_user_followup1" Member="user_registration1" ThisKey="following_user_id" OtherKey="user_id" Type="user_registration" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user_message" Member="user_messages">
+    <Type Name="user_message">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="user_registration_user_message" Member="user_registration" ThisKey="user_id" OtherKey="user_id" Type="user_registration" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
