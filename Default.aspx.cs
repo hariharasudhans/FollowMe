@@ -31,9 +31,15 @@ public partial class _Default : System.Web.UI.Page
         ///////////////////
 
         string message = DatabaseUtil.InsertUserData(fullname, emailAddress, encryptPassword);
-        name.Value = string.Empty;
-        email.Value = string.Empty;
-        lbAlert.Text = "<script type='text/javascript'>alert('" + message + "');window.location='home.aspx';</script>";
+        UserParameters userInfo = DatabaseUtil.UserAuthentication(emailAddress, encryptPassword);
+        if (userInfo != null)
+        {
+            name.Value = string.Empty;
+            email.Value = string.Empty;
+            Session["userID"] = userInfo.UserID;
+            Session["userInformation"] = userInfo;
+            lbAlert.Text = "<script type='text/javascript'>alert('" + message + "');window.location='home.aspx';</script>";            
+        }
     }
 
     protected void btnSignIn_Click(object sender, EventArgs e)
