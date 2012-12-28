@@ -1,0 +1,19 @@
+﻿body 
+{
+	background-color: #328bb3;
+	padding-top: 100px;
+}
+
+h3
+{
+	color: Maroon;
+}
+
+.home-main-table
+{
+	width: 50%; 
+	background-color: White;
+	-moz-box-shadow: 0 0 5px 5px #fff;
+    -webkit-box-shadow: 0 0 5px 5px#fff;
+    box-shadow: 0 0 5px 5px #fff;
+}

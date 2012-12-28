@@ -30,7 +30,7 @@
                                     Email:
                                 </td>
                                 <td align="right">
-                                    <input type="text" name="username or email" class="width_150" />
+                                    <input type="text" name="username or email" id="loginEmail" runat="server" class="width_150" />
                                 </td>
                             </tr>
                             <tr>
@@ -40,13 +40,14 @@
                                 </td>
                                 <td align="right">
                                     <br class="line_height_0_5" />
-                                    <input type="password" class="width_150" />
+                                    <input type="password" class="width_150" id="loginPassword" runat="server" />
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2" align="right">
                                     <br class="line_height_0_5" />
-                                    <asp:Button ID="btnSignIn" Text="Sign in" runat="server" />
+                                    <asp:Button ID="btnSignIn" Text="Sign in" runat="server" OnClientClick="return loginValidate();"
+                                        OnClick="btnSignIn_Click" />
                                 </td>
                             </tr>
                         </table>
@@ -103,6 +104,24 @@
     </form>
 
     <script type="text/javascript">
+
+        function loginValidate() {
+            var loginEmail = document.getElementById("<%=loginEmail.ClientID %>");
+            var loginPassword = document.getElementById("<%=loginPassword.ClientID %>");
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!loginEmail.value.match(/\S/)) {
+                alert("Please fill the email");
+                return false;
+            }
+            else if (!filter.test(loginEmail.value)) {
+                alert("Please provide a valid email address");
+                return false;
+            }
+            else if (!loginPassword.value.match(/\S/)) {
+                alert("Please fill the password");
+                return false;
+            }
+        }
 
         function validate() {
             var name = document.getElementById("<%=name.ClientID %>");
