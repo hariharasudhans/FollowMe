@@ -63,7 +63,11 @@
         function msgvalidate() {
             var msg = document.getElementById("<%=tbMessage.ClientID %>");
             if (!msg.value.match(/\S/)) {
-                alert("Please type your message here");
+                alert("Please type your message");
+                return false;
+            }
+            else if (msg.value == "Please type your message here") {
+                alert("Please type your message");
                 return false;
             }
         }
