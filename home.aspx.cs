@@ -79,7 +79,7 @@ public partial class home : System.Web.UI.Page
             indivMessages = DatabaseUtil.GetUserMessages(ID);
             allMessages.Add(indivMessages);
         }
-        if (!allMessages.Count.Equals(0))
+        if (!indivMessages.Count.Equals(0))
         {
             foreach (List<user_message> messages in allMessages)
             {
