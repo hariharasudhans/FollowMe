@@ -123,7 +123,6 @@ public class DatabaseUtil
 
     public static List<long?> GetUserFollowingIDs(long? followerID)
     {
-        string buttonText = string.Empty;
         var followingIDs = (from userFollow in DatabaseConnect.DataContext.user_followups where userFollow.follower_user_id == followerID select userFollow.following_user_id).ToList();
         return followingIDs;
     }

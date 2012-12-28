@@ -47,7 +47,7 @@
                         </table>
                     </td>
                     <td align="left" valign="top">
-                        <h3>
+                        <h3 class="align-left">
                             User Messages</h3>
                         <asp:PlaceHolder ID="phMessages" runat="server"></asp:PlaceHolder>
                     </td>

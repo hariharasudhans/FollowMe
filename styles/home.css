@@ -1,7 +1,7 @@
 ﻿body 
 {
 	background-color: #328bb3;
-	padding-top: 100px;
+	padding-top: 30px;
 }
 
 h3
@@ -16,4 +16,9 @@ h3
 	-moz-box-shadow: 0 0 5px 5px #fff;
     -webkit-box-shadow: 0 0 5px 5px#fff;
     box-shadow: 0 0 5px 5px #fff;
+}
+
+.align-left
+{
+	text-align: left;
 }

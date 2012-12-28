@@ -79,25 +79,33 @@ public partial class home : System.Web.UI.Page
             indivMessages = DatabaseUtil.GetUserMessages(ID);
             allMessages.Add(indivMessages);
         }
-
-        foreach (List<user_message> messages in allMessages)
+        if (!allMessages.Count.Equals(0))
         {
-            foreach (user_message message in messages)
+            foreach (List<user_message> messages in allMessages)
             {
-                Label lbName = new Label();
-                lbName.Font.Bold = true;
-                lbName.Text = message.user_registration.name + " - ";
-                Label lbMsg = new Label();
-                lbMsg.Text = message.message;
-                Label lbBreak1 = new Label();
-                lbBreak1.Text = "<br />";
-                Label lbBreak2 = new Label();
-                lbBreak2.Text = "<br />";
-                phMessages.Controls.Add(lbName);
-                phMessages.Controls.Add(lbMsg);
-                phMessages.Controls.Add(lbBreak1);
-                phMessages.Controls.Add(lbBreak2);
+                foreach (user_message message in messages)
+                {
+                    Label lbName = new Label();
+                    lbName.Font.Bold = true;
+                    lbName.Text = message.user_registration.name + " - ";
+                    Label lbMsg = new Label();
+                    lbMsg.Text = message.message;
+                    Label lbBreak1 = new Label();
+                    lbBreak1.Text = "<br />";
+                    Label lbBreak2 = new Label();
+                    lbBreak2.Text = "<br />";
+                    phMessages.Controls.Add(lbName);
+                    phMessages.Controls.Add(lbMsg);
+                    phMessages.Controls.Add(lbBreak1);
+                    phMessages.Controls.Add(lbBreak2);
+                }
             }
+        }
+        else
+        {
+            Label lbMsg = new Label();
+            lbMsg.Text = "Sorry, you dont have any messages";
+            phMessages.Controls.Add(lbMsg);
         }
     }
 
