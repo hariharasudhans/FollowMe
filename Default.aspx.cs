@@ -33,7 +33,7 @@ public partial class _Default : System.Web.UI.Page
         string message = DatabaseUtil.InsertUserData(fullname, emailAddress, encryptPassword);
         name.Value = string.Empty;
         email.Value = string.Empty;
-        lbAlert.Text = "<script type='text/javascript'>alert('" + message + "');</script>";
+        lbAlert.Text = "<script type='text/javascript'>alert('" + message + "');window.location='home.aspx';</script>";
     }
 
     protected void btnSignIn_Click(object sender, EventArgs e)
