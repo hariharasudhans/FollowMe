@@ -21,81 +21,85 @@
                     </div>
                 </td>
                 <td>
-                    <div class="default_login_div">
-                        <h3 align="left">
-                            <i>Login</i></h3>
-                        <table>
-                            <tr>
-                                <td align="left">
-                                    Email:
-                                </td>
-                                <td align="right">
-                                    <input type="text" name="username or email" id="loginEmail" runat="server" class="width_150" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="left">
-                                    <br class="line_height_0_5" />
-                                    Password:
-                                </td>
-                                <td align="right">
-                                    <br class="line_height_0_5" />
-                                    <input type="password" class="width_150" id="loginPassword" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" align="right">
-                                    <br class="line_height_0_5" />
-                                    <asp:Button ID="btnSignIn" Text="Sign in" runat="server" OnClientClick="return loginValidate();"
-                                        OnClick="btnSignIn_Click" />
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <asp:Panel ID="pnlLogin" DefaultButton="btnSignIn" runat="server">
+                        <div class="default_login_div">
+                            <h3 align="left">
+                                <i>Login</i></h3>
+                            <table>
+                                <tr>
+                                    <td align="left">
+                                        Email:
+                                    </td>
+                                    <td align="right">
+                                        <input type="text" name="username or email" id="loginEmail" runat="server" class="width_150" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left">
+                                        <br class="line_height_0_5" />
+                                        Password:
+                                    </td>
+                                    <td align="right">
+                                        <br class="line_height_0_5" />
+                                        <input type="password" class="width_150" id="loginPassword" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <br class="line_height_0_5" />
+                                        <asp:Button ID="btnSignIn" Text="Sign in" runat="server" OnClientClick="return loginValidate();"
+                                            OnClick="btnSignIn_Click" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </asp:Panel>
                     <br />
-                    <div class="default_signup_div">
-                        <h3 align="left">
-                            <i>New to FollowMe? Sign up</i></h3>
-                        <table>
-                            <tr>
-                                <td align="left">
-                                    <br class="line_height_0_5" />
-                                    Full name:
-                                </td>
-                                <td align="right">
-                                    <br class="line_height_0_5" />
-                                    <input id="name" runat="server" type="text" maxlength="20" class="width_150" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="left">
-                                    <br class="line_height_0_5" />
-                                    Email:
-                                </td>
-                                <td align="right">
-                                    <br class="line_height_0_5" />
-                                    <input id="email" runat="server" type="text" class="width_150" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="left">
-                                    <br class="line_height_0_5" />
-                                    Password
-                                </td>
-                                <td align="right">
-                                    <br class="line_height_0_5" />
-                                    <input type="password" class="width_150" id="password" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right" colspan="2">
-                                    <br class="line_height_0_5" />
-                                    <asp:Button ID="btnSignUp" runat="server" Text="Sign up" OnClientClick="return validate();"
-                                        OnClick="btnSignUp_Click" />
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <asp:Panel ID="pnlSignUp" runat="server" DefaultButton="btnSignUp">
+                        <div class="default_signup_div">
+                            <h3 align="left">
+                                <i>New to FollowMe? Sign up</i></h3>
+                            <table>
+                                <tr>
+                                    <td align="left">
+                                        <br class="line_height_0_5" />
+                                        Full name:
+                                    </td>
+                                    <td align="right">
+                                        <br class="line_height_0_5" />
+                                        <input id="name" runat="server" type="text" maxlength="20" class="width_150" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left">
+                                        <br class="line_height_0_5" />
+                                        Email:
+                                    </td>
+                                    <td align="right">
+                                        <br class="line_height_0_5" />
+                                        <input id="email" runat="server" type="text" class="width_150" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left">
+                                        <br class="line_height_0_5" />
+                                        Password
+                                    </td>
+                                    <td align="right">
+                                        <br class="line_height_0_5" />
+                                        <input type="password" class="width_150" id="password" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" colspan="2">
+                                        <br class="line_height_0_5" />
+                                        <asp:Button ID="btnSignUp" runat="server" Text="Sign up" OnClientClick="return validate();"
+                                            OnClick="btnSignUp_Click" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </asp:Panel>
                 </td>
             </tr>
         </table>

@@ -12,7 +12,7 @@
         <center>
             <table class="home-main-table">
                 <tr>
-                    <td align="left">
+                    <td align="left" valign="top">
                         <table>
                             <tr>
                                 <td align="left">
@@ -46,7 +46,7 @@
                             </tr>
                         </table>
                     </td>
-                    <td align="left">
+                    <td align="left" valign="top">
                         <h3>
                             User Messages</h3>
                         <asp:PlaceHolder ID="phMessages" runat="server"></asp:PlaceHolder>
