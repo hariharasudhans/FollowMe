@@ -58,7 +58,7 @@ public partial class _Default : System.Web.UI.Page
         {
             Session["userID"] = userInfo.UserID;
             Session["userInformation"] = userInfo;
-            Response.Redirect("home.aspx");
+            Response.Redirect("default.aspx");
         }
         else
         {
